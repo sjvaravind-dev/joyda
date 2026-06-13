@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JoyDa — A gameplay-first learning platform where children explore subjects, passions and real-world skills through interactive adventures." />
+    <title>JoyDa — Where Learning Feels Like Play</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- ============ NAV ============ -->
+    <header class="nav-wrap" id="nav">
+        <nav class="nav container">
+            <a href="#" class="brand" aria-label="JoyDa home">
+                <span class="brand-mark">J</span>
+                <span class="brand-name">JoyDa</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#worlds">Game Worlds</a></li>
+                <li><a href="#parents">For Parents</a></li>
+                <li><a href="#schools">For Schools</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary nav-cta-btn">Get in touch</a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+        <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+        <!-- Decorative sparkles -->
+        <span class="sparkle sp-1" aria-hidden="true">✦</span>
+        <span class="sparkle sp-2" aria-hidden="true">+</span>
+        <span class="sparkle sp-3" aria-hidden="true">✦</span>
+        <span class="sparkle sp-4" aria-hidden="true">+</span>
+        <span class="sparkle sp-5" aria-hidden="true">·</span>
+        <span class="sparkle sp-6" aria-hidden="true">✦</span>
+
+        <!-- Floating feature chips -->
+        <div class="float-chip chip-1"><span class="chip-emoji">🍎</span> Maths Through Adventures</div>
+        <div class="float-chip chip-2"><span class="chip-emoji">🎮</span> Learn Without Feeling Forced</div>
+        <div class="float-chip chip-3"><span class="chip-emoji">📚</span> Stories That Come Alive</div>
+        <div class="float-chip chip-4"><span class="chip-emoji">🚀</span> Skill Building Through Gameplay</div>
+        <div class="float-chip chip-5"><span class="chip-emoji">🔬</span> Science Through Exploration</div>
+        <div class="float-chip chip-6"><span class="chip-emoji">🌍</span> Explore New Worlds</div>
+        <div class="float-chip chip-7"><span class="chip-emoji">🎨</span> Creativity Through Play</div>
+        <div class="float-chip chip-8"><span class="chip-emoji">🏆</span> Rewards Kids Actually Love</div>
+
+        <div class="container hero-inner">
+            <div class="hero-badge">
+                <span class="badge-icon">✦</span> A NEW ERA OF LEARNING THROUGH PLAY
+            </div>
+
+            <h1 class="hero-title">
+                Where Learning<br />
+                Feels Like <span class="highlight">Play</span>.
+            </h1>
+
+            <p class="hero-sub">
+                A gameplay-first learning platform where children explore subjects,
+                passions and real-world skills through interactive adventures.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#demo" class="btn btn-primary">
+                    <span class="btn-icon">🎮</span> Try Demo
+                </a>
+                <a href="#" class="btn btn-orange">
+                    <span class="btn-icon">📱</span> Download App
+                </a>
+                <a href="#schools" class="btn btn-light">
+                    <span class="btn-icon">🏫</span> For Schools
+                </a>
+            </div>
+
+            <!-- Game world preview cards -->
+            <div class="hero-worlds">
+                <div class="world-card">
+                    <div class="wc-emoji">🚀</div>
+                    <div class="wc-meta">
+                        <span class="wc-tag">Science</span>
+                        <strong>Astro Rescue</strong>
+                    </div>
+                </div>
+                <div class="world-card">
+                    <div class="wc-emoji">🏛️</div>
+                    <div class="wc-meta">
+                        <span class="wc-tag">Mathematics</span>
+                        <strong>Temple Escape</strong>
+                    </div>
+                </div>
+                <div class="world-card">
+                    <div class="wc-emoji">📚</div>
+                    <div class="wc-meta">
+                        <span class="wc-tag">English</span>
+                        <strong>Mystery Manor</strong>
+                    </div>
+                </div>
+                <div class="world-card">
+                    <div class="wc-emoji">🔤</div>
+                    <div class="wc-meta">
+                        <span class="wc-tag">Early Literacy</span>
+                        <strong>Alphabet Pop</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ WHY JOYDA ============ -->
+    <section class="section why" id="about">
+        <div class="container">
+            <div class="section-head">
+                <span class="kicker">Why JoyDa</span>
+                <h2>Play First. <span class="text-soft">Learn Naturally.</span></h2>
+                <p class="lead">
+                    Kids don't feel like they're studying — they feel like they're exploring.
+                    The learning hides inside the adventure.
+                </p>
+            </div>
+
+            <div class="why-grid">
+                <article class="why-card">
+                    <div class="why-emoji">🎮</div>
+                    <h3>Gameplay First</h3>
+                    <p>Every concept is woven into a game world. Children play, solve, and explore — learning happens by surprise.</p>
+                </article>
+                <article class="why-card">
+                    <div class="why-emoji">📚</div>
+                    <h3>Curriculum Aligned</h3>
+                    <p>Built around real school learning goals — without the stress of textbook learning.</p>
+                </article>
+                <article class="why-card">
+                    <div class="why-emoji">🔁</div>
+                    <h3>Replayability</h3>
+                    <p>Dynamic gameplay keeps kids curious every single time they play. No two adventures are alike.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILL DEVELOPMENT ============ -->
+    <section class="section skills">
+        <div class="container">
+            <div class="section-head">
+                <span class="kicker">Skill Development</span>
+                <h2>Beyond Marks. <span class="text-soft">Beyond Memorisation.</span></h2>
+                <p class="lead">
+                    JoyDa is engineered around the skills that matter for the world children are growing into.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-emoji">🧠</div>
+                    <h3>Critical Thinking</h3>
+                    <p>Solve, decode, and reason — never memorise.</p>
+                    <a class="learn-more" href="#">Learn more →</a>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-emoji">🎨</div>
+                    <h3>Creativity</h3>
+                    <p>Open-ended play that rewards imagination.</p>
+                    <a class="learn-more" href="#">Learn more →</a>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-emoji">🏆</div>
+                    <h3>Confidence</h3>
+                    <p>Earn wins. Build momentum. Try again, braver.</p>
+                    <a class="learn-more" href="#">Learn more →</a>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-emoji">✨</div>
+                    <h3>Curiosity</h3>
+                    <p>Every world invites a new question.</p>
+                    <a class="learn-more" href="#">Learn more →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ GAME WORLDS ============ -->
+    <section class="section game-worlds" id="worlds">
+        <div class="container">
+            <div class="section-head">
+                <span class="kicker">Game Worlds</span>
+                <h2>Every World Unlocks <span class="text-soft">A New Adventure</span></h2>
+                <p class="lead">
+                    Four immersive universes. Each one teaches differently. Each one feels alive.
+                </p>
+            </div>
+
+            <div class="worlds-grid">
+                <article class="world-tile world-purple">
+                    <div class="wt-head">
+                        <span class="wt-tag">Science</span>
+                        <span class="wt-age">Ages 9–10</span>
+                    </div>
+                    <div class="wt-emoji">🚀</div>
+                    <h3>Astro Rescue</h3>
+                    <p>Save lost space stations while learning science, logic and survival strategy.</p>
+                    <ul class="wt-skills">
+                        <li>Gravity</li><li>Logic</li><li>Problem Solving</li>
+                    </ul>
+                </article>
+
+                <article class="world-tile world-orange">
+                    <div class="wt-head">
+                        <span class="wt-tag">Mathematics</span>
+                        <span class="wt-age">Ages 6–8</span>
+                    </div>
+                    <div class="wt-emoji">🏛️</div>
+                    <h3>Temple Escape</h3>
+                    <p>Solve mysteries, decode clues and escape ancient ruins through maths and puzzles.</p>
+                    <ul class="wt-skills">
+                        <li>Patterns</li><li>Arithmetic</li><li>Spatial Reasoning</li>
+                    </ul>
+                </article>
+
+                <article class="world-tile world-pink">
+                    <div class="wt-head">
+                        <span class="wt-tag">English</span>
+                        <span class="wt-age">Ages 9–10</span>
+                    </div>
+                    <div class="wt-emoji">📚</div>
+                    <h3>Mystery Manor</h3>
+                    <p>A magical library filled with hidden stories, language adventures and secret discoveries.</p>
+                    <ul class="wt-skills">
+                        <li>Vocabulary</li><li>Comprehension</li><li>Storytelling</li>
+                    </ul>
+                </article>
+
+                <article class="world-tile world-mint">
+                    <div class="wt-head">
+                        <span class="wt-tag">Early Literacy</span>
+                        <span class="wt-age">Ages 4–5</span>
+                    </div>
+                    <div class="wt-emoji">🔤</div>
+                    <h3>Alphabet Pop</h3>
+                    <p>Fast-paced word adventures designed for early learners and growing readers.</p>
+                    <ul class="wt-skills">
+                        <li>Phonics</li><li>Letter Sounds</li><li>Sight Words</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOR PARENTS ============ -->
+    <section class="section parents" id="parents">
+        <div class="container parents-grid">
+            <div class="parents-copy">
+                <span class="kicker">For Parents</span>
+                <h2>Screen time parents can finally <span class="text-soft">feel good about.</span></h2>
+                <p class="lead">
+                    Less passive scrolling. More curiosity, creativity and confidence —
+                    all in one calm, beautifully designed parent dashboard.
+                </p>
+                <div class="hero-cta no-margin">
+                    <a href="#" class="btn btn-primary">Open Dashboard</a>
+                    <a href="#" class="btn btn-light">See Sample Report</a>
+                </div>
+            </div>
+
+            <!-- Parent dashboard mock -->
+            <div class="dashboard">
+                <div class="dash-head">
+                    <span class="dash-url">joyda.app / dashboard</span>
+                    <span class="dash-pill dash-live">● Live</span>
+                </div>
+                <div class="dash-body">
+                    <h4>Parent Dashboard</h4>
+                    <p class="dash-sub">Aanya, Age 8 · This week</p>
+
+                    <div class="dash-stats">
+                        <div class="dash-stat">
+                            <span class="ds-label">Learning Accuracy</span>
+                            <span class="ds-value">92%</span>
+                            <span class="ds-delta up">+6%</span>
+                        </div>
+                        <div class="dash-stat">
+                            <span class="ds-label">Time Engaged</span>
+                            <span class="ds-value">3h 14m</span>
+                            <span class="ds-delta up">+22m</span>
+                        </div>
+                        <div class="dash-stat">
+                            <span class="ds-label">Worlds Visited</span>
+                            <span class="ds-value">4 / 6</span>
+                            <span class="ds-delta neutral">New</span>
+                        </div>
+                    </div>
+
+                    <h5>Skill Growth</h5>
+                    <div class="skill-bars">
+                        <div class="bar-row"><span>Critical Thinking</span><div class="bar"><i style="width:84%"></i></div><b>84%</b></div>
+                        <div class="bar-row"><span>Vocabulary</span><div class="bar"><i style="width:71%"></i></div><b>71%</b></div>
+                        <div class="bar-row"><span>Logic</span><div class="bar"><i style="width:90%"></i></div><b>90%</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOR SCHOOLS ============ -->
+    <section class="section schools" id="schools">
+        <div class="container parents-grid reverse">
+            <!-- Teacher dashboard mock -->
+            <div class="dashboard dashboard-alt">
+                <div class="dash-head">
+                    <span class="dash-url">joyda.app / dashboard</span>
+                    <span class="dash-pill dash-live">● Live</span>
+                </div>
+                <div class="dash-body">
+                    <h4>Teacher Dashboard</h4>
+                    <p class="dash-sub">Class 5-B · This week</p>
+
+                    <div class="dash-stats">
+                        <div class="dash-stat">
+                            <span class="ds-label">Class Engagement</span>
+                            <span class="ds-value">88%</span>
+                            <span class="ds-delta up">+9%</span>
+                        </div>
+                        <div class="dash-stat">
+                            <span class="ds-label">Avg. Completion</span>
+                            <span class="ds-value">76%</span>
+                            <span class="ds-delta up">+12%</span>
+                        </div>
+                        <div class="dash-stat">
+                            <span class="ds-label">Active Students</span>
+                            <span class="ds-value">28 / 31</span>
+                            <span class="ds-delta good">Good</span>
+                        </div>
+                    </div>
+
+                    <h5>Class Strengths</h5>
+                    <div class="skill-bars">
+                        <div class="bar-row"><span>Maths Mastery</span><div class="bar bar-orange"><i style="width:78%"></i></div><b>78%</b></div>
+                        <div class="bar-row"><span>Reading Fluency</span><div class="bar bar-orange"><i style="width:82%"></i></div><b>82%</b></div>
+                        <div class="bar-row"><span>Science Concepts</span><div class="bar bar-orange"><i style="width:69%"></i></div><b>69%</b></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="parents-copy">
+                <span class="kicker">For Schools</span>
+                <h2>Classrooms just got <span class="text-soft">more engaging.</span></h2>
+                <p class="lead">
+                    Curriculum-aligned gameplay, live teacher dashboards, school-wide analytics —
+                    students learn better when they're genuinely excited to participate.
+                </p>
+                <div class="hero-cta no-margin">
+                    <a href="#" class="btn btn-orange">For Schools</a>
+                    <a href="#demo" class="btn btn-light">Request a Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section final-cta" id="demo">
+        <div class="container">
+            <div class="cta-card">
+                <span class="kicker light">Turn Screen Time Into Growth</span>
+                <h2>Stories. Skills. Subjects. <span class="text-soft">Exploration.</span></h2>
+                <p class="lead">
+                    All inside one magical learning universe — designed to make every minute meaningful.
+                </p>
+                <div class="hero-cta no-margin">
+                    <a href="#" class="btn btn-primary"><span class="btn-icon">🎮</span> Try the Demo</a>
+                    <a href="#" class="btn btn-orange"><span class="btn-icon">📱</span> Download App</a>
+                </div>
+
+                <span class="cta-sparkle s1" aria-hidden="true">✦</span>
+                <span class="cta-sparkle s2" aria-hidden="true">+</span>
+                <span class="cta-sparkle s3" aria-hidden="true">✦</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" id="contact">
+        <div class="container footer-grid">
+            <div>
+                <a href="#" class="brand">
+                    <span class="brand-mark">J</span>
+                    <span class="brand-name">JoyDa</span>
+                </a>
+                <p class="muted">A gameplay-first learning universe where children explore subjects, skills, and stories through play.</p>
+            </div>
+            <div>
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#worlds">Game Worlds</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#">Download App</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Audience</h4>
+                <ul>
+                    <li><a href="#parents">For Parents</a></li>
+                    <li><a href="#schools">For Schools</a></li>
+                    <li><a href="#">For Teachers</a></li>
+                    <li><a href="#">For Kids</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p class="muted">© <span id="year"></span> JoyDa. Made with care for curious kids.</p>
+            <div class="socials">
+                <a href="#" aria-label="Instagram">Ig</a>
+                <a href="#" aria-label="YouTube">Yt</a>
+                <a href="#" aria-label="X / Twitter">X</a>
+                <a href="#" aria-label="LinkedIn">In</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="assets/js/three.scene.js"></script>
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>
